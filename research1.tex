@@ -1,0 +1,131 @@
+\documentclass{article}
+\usepackage{tabu}
+\title{A PROCESSOR DESIGN TOOLKIT FOR AN OPEN-SOURCE FPGA TOOLCHAIN}
+\begin{document}
+\begin{titlepage}
+\maketitle
+\begin{center}
+By
+\vspace{5mm}
+GROUP 101.
+
+DEPARTMENT OF COMPUTER SCIENCE
+
+SCHOOL OF COMPUTING AND INFORMATICS TECHNOLOGY
+\vspace{20mm}
+
+A concept Paper submitted to the school of computing and informatics technology
+
+For the Study of a processor design toolkit for an open-source FPGA toolchain
+
+
+\vspace{10mm}
+Supervisor
+
+Enerst Mwebaze
+
+Department of Computer Science
+
+School of Computing and Informatics Technology, Makerere University
+\end{center}
+GROUP MEMBERSHIP:
+\\
+\\
+\begin{tabu} to 1.2\textwidth { | X[1]  | X[c] | X[r] | }
+\hline
+Name & Reg Number & Student Number \\
+\hline
+Kiwala Martin &15/U/485 & 215000474 \\
+\hline
+Kyagera Sulaiman&15/U/6849/PS&215008420\\
+\hline
+Tugumisirize Enoth&15/U/13228/PS&215007998\\
+\hline
+Akora Brian Marco&15/U/79&215001425\\
+\hline
+\end{tabu}
+\end{titlepage}
+\newpage
+\begin{flushleft}
+\section{Introdution}
+A field-programmable gate array (FPGA) is an integrated circuit designed to be configured by a customer or a designer after manufacturing.
+
+For this reason, it is referred to as Field Programmable.
+
+Programming frameworks for reconfigurable architectures are highly dependent on the structure, the hardware granularity and the language used. 
+
+Although far from being an ideal hardware description language, Verilog which is very similar to C was selected as an appealing entry-point for the configuration of reconfigurable processors since the first architectures.
+
+\section{Backgroung to the problem}
+The use of FPGAs outside the industry has previously been limited due to the high cost and complexity of their associated development software.
+
+And also there has been a very big problem of people learning the hardware description languages like VERILOG and VHDL because of the lack of tutorials to teach such languages which are the only languages that an be used to configure the FPGAs.
+
+However this is changing, with an open-source toolchain for popular FPGA devices becoming available in the previous years(the equivalent of Linux in the OS world).
+
+\section{Problem Statement}
+This project will build on the existing toolchain to develop additional software necessary to allow students to design and explore simple processor designs on a custom FPGA development board.
+
+The current toolchainn will require the use of VERILOG which is a hardware description language as mentioned in the introduction above.
+
+VERILOG is very powerful but also very general therefore this project will develop a higher level language(possibly a graphical language) focused on the development of simple processor designs from a small number of standard components.
+(such as RAM, multiplexers and registers).
+
+\section{Objectives}
+
+\subsection{Main Objective}
+We seek to develop additional software to the existing toolchain inorder  to enable students to explore/manipulate and develop simple processor designs on a custom FPGA development board.
+\subsection{Other Objective}
+Alongside the main objective we also seek to develop an FPGA from scratch and have a newly constructed circuit board.
+
+we also seek to use the available two hardware description languages i.e VERILOG and VHDL to configure the different custom FPGAs.
+
+\section{Methodology}
+To begin with, we shall use Solaris a Unix Operating System backed by a SPARC workstation from SUN.
+We considered the use of a Virtual Machine and opted to explore the installation of Linux in a Virtual machine. 
+\newline
+The Preliminary investigations into doing this project revealed that we had three ways to do this: Parallels Desktop, VMware Fusion and Virtual Box and chose to go for VMware Fusion.
+With the two major FPGA vendors Altera and Xilinx, we opted for Xilinx; largely due to the Micro Blaze soft processor.
+\newline
+The development board of choice is to be between the ML403 board that has a Virtex-4 FPGA with a PowerPC 405 core and the Spartan 3 based board.
+The embedded processor to be used will be the Micro Blaze soft processor core: a 32-bit Harvard RISC architecture optimized for vendor-of-choice’s (Xilinx’s) FPGAs. The basic architecture consists of 32 general-purpose registers, an Arithmetic Logic Unit, a shift unit and two levels of interrupt.
+\newline
+The FPGA design software packages we will use are bundled on the ML403 board and are called Integrated Software Environment (ISE) and Embedded Design Kit (EDK) and will be used to design and implement the additional software intended for exploring simple processor designs.
+\newline
+The logic simulators required saw us explore the one provided by Xilinx software which is Verilog and VHDL Simulator but this runs under only Windows XP. So we opted to use Incisive Unified Simulator but only after obtaining an evaluation license from Cadence 
+The Synthesis tool to be utilized will be from Xilinx but XST Synthesis tool seems like a sufficient one to use.
+We will also use C programming Language substantially as most of the Xilinx software device drivers are written in C.   
+
+\section{Outcomes}
+\begin{itemize}
+\item At the end of this project students will be able to develop simple processor designs using the higher level language developed in this project.
+\end{itemize}
+\begin{itemize}
+\item Students will now be able to manipulate and change any processor design and be able to customize it to whatever logic design one feels best.
+\end{itemize}
+\begin{itemize}
+\item Students will be able to develop an FPGA from scratch and be able to configure it in any logic way that best suits them.
+\end{itemize}
+\end{flushleft}
+
+\begin{thebibliography}{9}
+
+\bibitem{prof.Alex Rogers}
+a stack-based virtual machine for physical devices 21st October 2016
+by Prof. Alex Rogers
+\\\texttt{http://www.cs.ox.ac.uk/people/alex.rogers/stack/Stack.pdf}
+\bibitem{R. Aceves}
+Desarrollo de un enlace inalámbrico para telefonía fija empleando una FPGA. Final Project at the ETSII, University of Valladolid, Spain, 2006. 
+\bibitem{J. Gray}
+FPGA CPU Links.
+\\\texttt{http://www. fpgacpu.org/links.html, September, 2002.}
+\bibitem{}
+\texttt{https://www.quora.com/advantages-and-disadvantages-of-Verilog-or-VHDL}
+\bibitem{}
+\texttt{https://www.sparkfun.com/news/1203}
+\end{thebibliography}
+
+
+
+
+\end{document}
